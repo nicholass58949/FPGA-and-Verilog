@@ -76,4 +76,5 @@ module StudentInfoSorting;
         $display("Student_name: %s, Sum_score: %.2f, Average_score: %.2f", students[i].name, students[i].math_score, students[i].physics_score);
     end
   end
+  
 endmodule
