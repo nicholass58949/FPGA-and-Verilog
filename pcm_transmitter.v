@@ -61,6 +61,14 @@ module pcm_transmitter (
 	output reg data_o,					//send data
 	output reg clk_o					//send clock
 );
+
+//assign RNG0 = 1'b0;
+//assign RNG1 = 1'b0;
+//assign PRE = 1'b0;
+//assign PWRDWN = 1'b0;
+
+
+
 //----------------- count control ------------------//
 reg [5:0] state;		//state machine
 reg [15:0]baud_cntr;	//baud rate count
@@ -127,10 +135,12 @@ always @(posedge clk_i or negedge rst_n_i) begin
 								if (bit_counter >= 4'h7) state <= s_stop;
 								else state <= s_send_data; end 
 							else state <= s_send_data; end
-		s_stop		: begin if(frame_counter >= length_i + number_i) begin
+		s_stop		: begin if(frame_counter >= length_i + number_i) 
+								begin
 								if(frame_num >= cntr_num_i) state <= s_idle;
 								else if(timer_count >= send_time_i) state <= s_send_scode;
-								else state <= s_wait; end
+								else state <= s_wait; 
+								end
 							else state <= s_send_data; end
 		s_wait 		: begin if(timer_count >= send_time_i) state <= s_send_scode;
 							else state <= s_wait; end
