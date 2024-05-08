@@ -58,8 +58,8 @@ module pcm_transmitter (
 	//output reg CNTL_IN7;
 	//output reg CNTL_IN8;
 
-	//output reg data_o,					//send data
-	//output reg clk_o					//send clock
+	output reg data_o,					//send data
+	output reg clk_o					//send clock
 );
 //----------------- count control ------------------//
 reg [5:0] state;		//state machine
