@@ -19,8 +19,47 @@ module pcm_transmitter (
 	input[1:0] number_i,				//set send synchronous code length 0:4byte ~ 3:1byte
 	input [31:0] cntr_num_i,			//send frame count
 	input [31:0] send_time_i,			//interval time
-	output reg data_o,					//send data
-	output reg clk_o					//send clock
+
+
+	//output reg RGB_IN0;
+	//output reg RGB_IN1;
+	//output reg RGB_IN2;
+	//output reg RGB_IN3;
+	//output reg RGB_IN4;
+	//output reg RGB_IN5;
+	//output reg RGB_IN6;
+	//output reg RGB_IN7;
+	//output reg RGB_IN8;
+	//output reg RGB_IN9;
+	//output reg RGB_IN10;
+	//output reg RGB_IN11;
+	//output reg RGB_IN12;
+	//output reg RGB_IN13;
+	//output reg RGB_IN14;
+	//output reg RGB_IN15;
+	//output reg RGB_IN16;
+	//output reg RGB_IN17;
+
+	//output reg RNG0;
+	//output reg RNG1;
+
+	//output reg PRE;
+	//output reg PWRDWN;
+	//output reg PCLK_IN;
+	//output reg DE_IN;
+
+	//output reg CNTL_IN0;
+	//output reg CNTL_IN1;
+	//output reg CNTL_IN2;
+	//output reg CNTL_IN3;
+	//output reg CNTL_IN4;
+	//output reg CNTL_IN5;
+	//output reg CNTL_IN6;
+	//output reg CNTL_IN7;
+	//output reg CNTL_IN8;
+
+	//output reg data_o,					//send data
+	//output reg clk_o					//send clock
 );
 //----------------- count control ------------------//
 reg [5:0] state;		//state machine
